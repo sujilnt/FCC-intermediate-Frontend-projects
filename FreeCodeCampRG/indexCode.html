@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="minifiedMain.css" rel="dns-prefetch stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="dns-prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<section>
+    <header>
+        <h1 class="header1">Random Qoute Generator</h1>
+        <p class="headerText">Here are some of the quotes that inspire me , I had collected them during my Bootcamp. I hope you will enjoy them. </p>
+    </header>
+</section>
+<section class="wholesection">
+<section class="container">
+    <div class="column">
+    <div class="card">
+      <div class="quote">
+          <div  id="loader" class="loaders"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+          <div id="quoter"></div>
+          <div id="author" class="authorstyle"></div>
+      </div>
+    </div>
+    <div class="newButton" onclick="loadData()">New Quote</div>
+    <div>
+        <a class="newButton"
+           id="tweetbutton" href="#"
+           data-size="large" target="_blank" style="bottom: 117px;">
+            <i class="fa fa-twitter customise" aria-hidden="true"></i></a>
+    </div>
+    </div>
+</section>
+</section>
+<script src="minifiedMain.js"></script>
+</body>
+</html>

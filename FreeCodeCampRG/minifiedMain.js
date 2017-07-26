@@ -1,0 +1,6 @@
+/**
+ * Created by sujil on 25/07/17.
+ */
+var data="",author=document.getElementById("author"),quotes=document.getElementById("quoter"),loader=document.getElementById("loader"),tweet=document.getElementById("tweetbutton");function hideContent(a){"loading"===a?(author.style.opacity=0,quotes.style.opacity=0,loader.style.opacity=1):(loader.style.opacity=0,author.style.opacity=1,quotes.style.opacity=1)}function loadData(){hideContent("loading");var a=randomRange(0,data.length);filterData(a,data)}
+function filterData(a,b){b=b.filter(function(b,c){if(a===c)return b});setTimeout(function(){addData(b)},1E3)}function addData(a){0<a.length&&"undefined"!==a[0].author?(author.innerHTML=a[0].author,quotes.innerHTML=a[0].quote,hideContent("loaded"),tweet.href='https://twitter.com/intent/tweet?text="'+a[0].quote+'" .-'+a[0].author+" #Quotes "):"undefined"===a[0].author&&"undefined"===a[0].quotes&&loadData()}function handlingSucess(){data=JSON.parse(this.responseText);loadData()}
+function handlingError(){alert("the api load is low or Server is down")}var AsyncLoadObj=new XMLHttpRequest;AsyncLoadObj.open("GET","https://random-quote-generator.herokuapp.com/api/quotes/");AsyncLoadObj.onload=handlingSucess;AsyncLoadObj.onerror=handlingError;AsyncLoadObj.send();var randomRange=function(a,b){return Math.floor(Math.random()*(b-a)+a)};

@@ -1,0 +1,145 @@
+body{
+    font-size: 14px;
+    padding: 0;
+    background: linear-gradient(to right, rgb(238, 9, 121), rgb(255, 106, 0));
+    background :url("https://images.unsplash.com/photo-1455383333344-451b6147021b?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+    background :url("https://images.unsplash.com/photo-1448932155749-638e51b56f03?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    overflow: hidden;
+    background-size: 100vw 100vh;
+}
+body,
+.quote,
+.container{
+    width: 100%;
+}
+header,
+body,
+div,
+p,
+.newButton,
+.authorstyle::before,
+.customise{
+    position: relative;
+}
+.header1,
+.headerText,
+.loaders{
+    text-align: center;
+}
+
+.wholesection{
+    animation: dropping 2s forwards ;
+    transform-origin: 50% 50%;
+}
+@keyframes dropping {
+    0%{
+      transform:  scale(0.5)  translateY(-100px);
+      opacity: 0;
+
+    }
+    100%{
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+}
+.header1,
+.headerText{
+    font-style: italic;
+    text-decoration: underline;
+}
+.header1{
+    font-size: 25px;
+    font-weight: 700;
+    color: #70462d;
+}
+.container{
+    flex-wrap: wrap;
+    margin: 80px 100px;
+    background: transparent;
+}
+.card{
+    background: inherit;
+    width: 600px;
+    height: 200px;
+    box-shadow: 0px 0px 4px #504545;
+    justify-content: center;
+    align-items: flex-start;
+}
+.quote{
+    color: #081a26;
+    padding: 55px 40px;
+    font-size: 18px;
+    text-align: left;
+}
+.authorstyle{
+    text-align: right;
+    font-size: 15px;
+}
+.newButton{
+    padding: 9px;
+    background: #ecc5ac;
+    cursor: pointer;
+    box-shadow: 1px 3px 10px #e2dfe0;
+    border: 1px solid #cf9c83;
+    border-radius-top: 14px;
+    margin: 15px 39px;
+    width: 66px;
+    color: #bc6a43;
+    bottom: 75px;
+    align-self: flex-end;
+}
+.column,
+body{
+    flex-direction: column;
+}
+.column,
+.container,
+.card,
+body{
+    display: flex;
+}
+.loaders{
+    font-size: 26px;
+    right: 49%;
+}
+.loaders,
+#quoter::before{
+    position: absolute;
+}
+a{
+    text-decoration: none;
+}
+#quoter::before,
+.header1,
+.headerText{
+    font-family: cursive;
+}
+#quoter::before{
+    content: '"';
+    font-size: 30px;
+    font-weight: 100;
+    top: -18px;
+    left: -18px;
+}
+.authorstyle::before{
+    content: "- ";
+    font-size: 21px;
+}
+.newButton .customise{
+    top: 2px;
+    left: 1px;
+}
+.headerText,
+.newButton .customise{
+    font-size: 20px;
+}
+body,
+.headerText{
+    margin: 0;
+}
+
+.headerText{
+    color: #c5734b;
+}
